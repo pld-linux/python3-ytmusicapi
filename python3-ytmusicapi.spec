@@ -58,7 +58,7 @@ cat > setup.py << EOF
 import setuptools
 
 if __name__ == "__main__":
-    setuptools.setup()
+    setuptools.setup(version='%{version}')
 EOF
 
 %build
@@ -83,7 +83,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc README.rst
 %attr(755,root,root) %{_bindir}/ytmusicapi
 %{py3_sitescriptdir}/%{module}
-%{py3_sitescriptdir}/%{module}-0.0.0-py3.10.egg-info
+%{py3_sitescriptdir}/%{module}-%{version}-py3.10.egg-info
 
 %if %{with doc}
 %files apidocs
