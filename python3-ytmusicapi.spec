@@ -7,7 +7,7 @@ Summary:	Unofficial API for YouTube Music
 Summary(pl.UTF-8):	Nieoficjalne API do YouTube Music
 Name:		python3-%{module}
 Version:	1.2.1
-Release:	3
+Release:	4
 License:	MIT
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/ytmusicapi/
@@ -83,7 +83,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc README.rst
 %attr(755,root,root) %{_bindir}/ytmusicapi
 %{py3_sitescriptdir}/%{module}
-%{py3_sitescriptdir}/%{module}-%{version}-py3.10.egg-info
+%{py3_sitescriptdir}/%{module}-%{version}-py3.13.egg-info
 
 %if %{with doc}
 %files apidocs
